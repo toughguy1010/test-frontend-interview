@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-
+import logo from "./logo.svg";
+import "./App.css";
+import { publicRoutes } from "./routes/routes";
+import DeFaultLayout from "./component/Layouts/defaultLayout";
+import Home from "./pages/Home/home";
+import Blog from "./pages/Blog/blog";
+import News from "./pages/News/news";
+import Serviecs from "./pages/Serviecs/serviecs";
+import Contact from "./pages/Contact/contact";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DeFaultLayout>
+          {window.location.pathname === "/" && <Home />}
+          {window.location.pathname === "/services" && <Serviecs />}
+          {window.location.pathname === "/news" && <News />}
+          {window.location.pathname === "/blog" && <Blog />}
+          {window.location.pathname === "/contact" && <Contact />}
+      </DeFaultLayout>
     </div>
   );
 }
