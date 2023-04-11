@@ -1,6 +1,4 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { publicRoutes } from "./routes/routes";
 import DeFaultLayout from "./component/Layouts/defaultLayout";
 import Home from "./pages/Home/home";
 import Blog from "./pages/Blog/blog";
